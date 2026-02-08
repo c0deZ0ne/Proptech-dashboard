@@ -139,7 +139,7 @@ const MetricItem = ({
   color: string;
   trendUp?: boolean;
 }) => (
-  <div className="bg-white border border-border w-[189px] rounded-[12px] pl-[15px] pt-[13px] justify-left  flex flex-col  h-[73px] ">
+  <div className="bg-white border border-border w-[189px] rounded-[12px] pl-[15px]  pt-[13px] justify-left  flex flex-col  h-[73px] ">
     <p className="text-[19px] font-semibold leading-[120%]" style={{ color }}>
       {value}
     </p>
@@ -148,7 +148,7 @@ const MetricItem = ({
         {label}
       </p>
       <span
-        className={`flex items-center gap-1 text-[12px] font-regular px-2 py-0.5 rounded-full`}
+        className={`flex items-center gap-1 text-[12px] font-regular pr-[15px] py-0.5 rounded-full`}
       >
         <div
           className={`w-[14px] h-[14px] rounded-full flex items-center justify-center ${trendUp ? "bg-[#12B76A]" : "bg-[#F04438]"}`}

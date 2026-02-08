@@ -865,3 +865,56 @@ export const BarIcon = () => (
     />
   </svg>
 );
+
+export const CalenderNextIcon = () => (
+  <svg
+    width="8"
+    height="14"
+    viewBox="0 0 8 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.02 5.49188L5.05 3.52188L1.84 0.31188C1.16 -0.35812 0 0.12188 0 1.08188V7.31188V12.9219C0 13.8819 1.16 14.3619 1.84 13.6819L7.02 8.50188C7.85 7.68188 7.85 6.32188 7.02 5.49188Z"
+      fill="#98A2B3"
+    />
+  </svg>
+);
+
+export const CarlendarPrevIcon = () => (
+  <svg
+    width="8"
+    height="14"
+    viewBox="0 0 8 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5.8025 0.318772L2.5925 3.52877L0.6225 5.48877C-0.2075 6.31877 -0.2075 7.66877 0.6225 8.49877L5.8025 13.6788C6.4825 14.3588 7.6425 13.8688 7.6425 12.9188V7.30877V1.07877C7.6425 0.118772 6.4825 -0.361228 5.8025 0.318772Z"
+      fill="#98A2B3"
+    />
+  </svg>
+);
+
+export const CalendarBackIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M5.09976 12L19.5 12"
+      stroke="white"
+      stroke-width="1.8"
+      stroke-linecap="square"
+    />
+    <path
+      d="M10.5498 5.97639L4.4998 12.0004L10.5498 18.0254"
+      stroke="white"
+      stroke-width="1.8"
+      stroke-linecap="square"
+    />
+  </svg>
+);
