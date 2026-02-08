@@ -1,0 +1,7 @@
+npx create-next-app@latest ./ --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm --skip-install
+npx create-next-app@latest ./ --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm --skip-install
+`npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm --skip-install --yes
+mkdir app-tmp && npx create-next-app@latest ./app-tmp --typescript --tailwind --eslint --app --src-dir --import-alias "@/*" --use-npm --skip-install --yes && mv ./app-tmp/* ./ && mv ./app-tmp/.* ./ && rmdir app-tmpnpm install @tanstack/react-query lucide-react clsx tailwind-merge --legacy-peer-deps
+
+npm install @tanstack/react-query lucide-react clsx tailwind-merge --legacy-peer-deps
+npx shadcn@latest add card dialog input select checkbox checkbox-group label
