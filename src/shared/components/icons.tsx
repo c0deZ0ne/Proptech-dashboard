@@ -514,21 +514,21 @@ export const PayoutCenterIcon = ({
   >
     <path
       d="M17.333 12H9.33301"
-      stroke="#F4F4F5"
+      stroke="var(--color-brand-gray-pale)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M29.333 14.6275V17.3743C29.333 18.1076 28.7463 18.7075 27.9996 18.7342H25.3863C23.9463 18.7342 22.6263 17.6809 22.5063 16.2409C22.4263 15.4009 22.7463 14.6142 23.3063 14.0675C23.7996 13.5609 24.4796 13.2676 25.2263 13.2676H27.9996C28.7463 13.2942 29.333 13.8942 29.333 14.6275Z"
-      stroke="#F4F4F5"
+      stroke="var(--color-brand-gray-pale)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M23.307 14.066C22.747 14.6127 22.427 15.3993 22.507 16.2393C22.627 17.6793 23.947 18.7327 25.387 18.7327H28.0003V20.666C28.0003 24.666 25.3337 27.3327 21.3337 27.3327H9.33366C5.33366 27.3327 2.66699 24.666 2.66699 20.666V11.3327C2.66699 7.70602 4.85366 5.17268 8.25366 4.74601C8.60033 4.69268 8.96033 4.66602 9.33366 4.66602H21.3337C21.6803 4.66602 22.0137 4.67933 22.3337 4.73267C25.7737 5.13267 28.0003 7.67935 28.0003 11.3327V13.266H25.227C24.4803 13.266 23.8003 13.5593 23.307 14.066Z"
-      stroke="#F4F4F5"
+      stroke="var(--color-brand-gray-pale)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -688,7 +688,7 @@ export const TaskListIcon = ({
 export const CardHomeIcon = ({
   width = 24,
   height = 24,
-  color = "#4545FE",
+  color = "var(--color-brand-blue)",
   ...props
 }: IconProps) => (
   <>
@@ -722,7 +722,12 @@ export const MessageIcon = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <rect width="57.6" height="57.6" rx="28.8" fill="#242526" />
+    <rect
+      width="57.6"
+      height="57.6"
+      rx="28.8"
+      fill="var(--color-brand-black-ebony)"
+    />
     <rect
       x="0.5"
       y="0.5"
@@ -753,7 +758,7 @@ export const SettingTogleIcon = () => (
   >
     <path
       d="M22 6.5H16"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -761,7 +766,7 @@ export const SettingTogleIcon = () => (
     />
     <path
       d="M6 6.5H2"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -769,7 +774,7 @@ export const SettingTogleIcon = () => (
     />
     <path
       d="M10 10C11.933 10 13.5 8.433 13.5 6.5C13.5 4.567 11.933 3 10 3C8.067 3 6.5 4.567 6.5 6.5C6.5 8.433 8.067 10 10 10Z"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -777,7 +782,7 @@ export const SettingTogleIcon = () => (
     />
     <path
       d="M22 17.5H18"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -785,7 +790,7 @@ export const SettingTogleIcon = () => (
     />
     <path
       d="M8 17.5H2"
-      stroke="#292D32"
+      stroke="var(--color-brand-gray-slate)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -793,7 +798,7 @@ export const SettingTogleIcon = () => (
     />
     <path
       d="M14 21C15.933 21 17.5 19.433 17.5 17.5C17.5 15.567 15.933 14 14 14C12.067 14 10.5 15.567 10.5 17.5C10.5 19.433 12.067 21 14 21Z"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -812,21 +817,21 @@ export const TrendUpIcon = () => (
   >
     <path
       d="M16.5 9.5L12.3 13.7L10.7 11.3L7.5 14.5"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M14.5 9.5H16.5V11.5"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -844,21 +849,21 @@ export const BarIcon = () => (
   >
     <path
       d="M19.2598 18.9V7.1C19.2598 5.6 18.6198 5 17.0298 5H15.9898C14.3998 5 13.7598 5.6 13.7598 7.1V18.9"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M5.25977 18.9V12.1C5.25977 10.6 5.89977 10 7.48977 10H8.52977C10.1198 10 10.7598 10.6 10.7598 12.1V18.9"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2 19H22"
-      stroke="#52525B"
+      stroke="var(--color-brand-gray-zinc)"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -876,7 +881,7 @@ export const CalenderNextIcon = () => (
   >
     <path
       d="M7.02 5.49188L5.05 3.52188L1.84 0.31188C1.16 -0.35812 0 0.12188 0 1.08188V7.31188V12.9219C0 13.8819 1.16 14.3619 1.84 13.6819L7.02 8.50188C7.85 7.68188 7.85 6.32188 7.02 5.49188Z"
-      fill="#98A2B3"
+      fill="var(--color-brand-gray-cloud)"
     />
   </svg>
 );
@@ -891,7 +896,7 @@ export const CarlendarPrevIcon = () => (
   >
     <path
       d="M5.8025 0.318772L2.5925 3.52877L0.6225 5.48877C-0.2075 6.31877 -0.2075 7.66877 0.6225 8.49877L5.8025 13.6788C6.4825 14.3588 7.6425 13.8688 7.6425 12.9188V7.30877V1.07877C7.6425 0.118772 6.4825 -0.361228 5.8025 0.318772Z"
-      fill="#98A2B3"
+      fill="var(--color-brand-gray-cloud)"
     />
   </svg>
 );

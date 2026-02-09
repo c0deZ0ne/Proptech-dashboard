@@ -98,8 +98,8 @@ export function CalendarDrawer({ open, onOpenChange }: CalendarDrawerProps) {
       {/* Calendar Drawer - positioned from the right edge of the page content */}
       <div className="fixed top-[82px] px-[260px] right-0 h-[calc(100vh-82px)] z-50 flex justify-end pointer-events-none">
         <div className="w-full  mx-auto  flex justify-end pointer-events-none">
-          <div className="w-[390px] bg-[#111111] text-white border-l border-white/10  pointer-events-auto ">
-            <div className="flex flex-row items-center justify-between px-6 py-4 border-b border-white/10 bg-[#171717]">
+          <div className="w-[390px] bg-brand-black-pure text-white border-l border-white/10  pointer-events-auto ">
+            <div className="flex flex-row items-center justify-between px-6 py-4 border-b border-white/10 bg-brand-black-rich">
               <div
                 className="flex items-center gap-2 cursor-pointer hover:opacity-80"
                 onClick={() => onOpenChange(false)}
@@ -144,7 +144,7 @@ export function CalendarDrawer({ open, onOpenChange }: CalendarDrawerProps) {
                   {dayNames.map((day) => (
                     <div
                       key={day}
-                      className="text-center relative text-[#969696] pl-[5.64px]  font-medium uppercase  flex "
+                      className="text-center relative text-brand-gray-smoke pl-[5.64px]  font-medium uppercase  flex "
                     >
                       {day}
                     </div>
@@ -169,7 +169,7 @@ export function CalendarDrawer({ open, onOpenChange }: CalendarDrawerProps) {
                           className={`absolute ${isFirstOfMonth ? "w-[42px]" : "w-[28px]"} h-[16px] text-[9.9px] font-[9.9px] rounded-[200px] flex items-center justify-center top-[2px] left-[8px]
                           ${
                             isSelected(dayDate)
-                              ? "bg-[#4545FE] text-white hover:bg-[#4545FE]"
+                              ? "bg-brand-blue text-white hover:bg-brand-blue"
                               : isToday(dayDate)
                                 ? "bg-white/5 text-white underline underline-offset-4 hover:bg-white/10"
                                 : "text-white hover:bg-white/10"

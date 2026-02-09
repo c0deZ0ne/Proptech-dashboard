@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={euclidCircularB.variable}>
-      <body className="antialiased font-sans flex min-h-screen flex-col bg-[#F9FAFB] dark:bg-[#F9FAFB]">
+      <body className="antialiased font-sans flex min-h-screen flex-col bg-brand-gray-soft dark:bg-brand-gray-soft">
         <Providers>
           <Appbar />
           <Breadcrump>
@@ -58,13 +58,13 @@ export default function RootLayout({
                   className={`flex items-center space-x-[10px] h-[38px] px-[21px] rounded-[8px] transition-all
                       ${
                         item.isActive
-                          ? "bg-[#176D5815] text-[#176D58] border border-[#176D5815]"
-                          : "text-[#3D3D3D] hover:bg-gray-100"
+                          ? "bg-brand-green-tint text-brand-green-dark border border-brand-green-tint"
+                          : "text-brand-gray-deep hover:bg-gray-100"
                       }`}
                 >
                   <span
                     className={
-                      item.isActive ? "text-[#176D58]" : "text-gray-500"
+                      item.isActive ? "text-brand-green-dark" : "text-gray-500"
                     }
                   >
                     {item.icon}

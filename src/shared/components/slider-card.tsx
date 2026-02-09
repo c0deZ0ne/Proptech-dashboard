@@ -35,9 +35,9 @@ const SliderCard: React.FC<SliderCardProps> = ({
   }, [nextSlide]);
 
   const badgeStyles = {
-    clicked: "bg-[#4545FE/80] text-white",
-    watched: "bg-[#111111/60] text-white",
-    featured: "bg-[#F9FAFB/90] text-[#111111]",
+    clicked: "bg-brand-blue/80 text-white",
+    watched: "bg-foreground/60 text-white",
+    featured: "bg-brand-gray-soft/90 text-foreground",
   };
 
   return (

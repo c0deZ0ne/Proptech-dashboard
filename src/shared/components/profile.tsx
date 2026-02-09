@@ -56,14 +56,14 @@ const Profile = ({
           </TooltipTrigger>
           <TooltipContent
             side="bottom"
-            className="bg-[#F9FAFB] text-white border w-[170px]"
-            arrowClassName="bg-[#F9FAFB] fill-[#F9FAFB]"
+            className="bg-brand-gray-soft text-white border w-[170px]"
+            arrowClassName="bg-brand-gray-soft fill-brand-gray-soft"
           >
             <div className="text-md p-2 space-y-[5px]">
-              <p className="font-semibold text-[16px] leading-[14.3px] text-[#292929]  ">
+              <p className="font-semibold text-[16px] leading-[14.3px] text-brand-gray-dark  ">
                 {userName}
               </p>
-              <p className="text-[14px] leading-[14.3px] text-[#525252]">
+              <p className="text-[14px] leading-[14.3px] text-brand-gray-text">
                 {userEmail}
               </p>
             </div>
@@ -72,7 +72,7 @@ const Profile = ({
         <DropdownMenuContent align="end" className="w-[300px] p-2">
           {/* User Info Section */}
           <div className="flex items-center gap-3 px-2 py-3">
-            <div className="w-[40px] h-[40px] rounded-full bg-[#105B48] text-white flex items-center justify-center font-bold text-sm uppercase">
+            <div className="w-[40px] h-[40px] rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-sm uppercase">
               {initials}
             </div>
             <div className="flex flex-col">

@@ -26,7 +26,7 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
       >
         {/* Modal */}
         <div
-          className="flex flex-col w-[438px] h-[559px]  bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+          className="flex flex-col w-[438px] h-[559px]  bg-brand-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Header with Icon - Dark Blue Section with Background Image */}
@@ -55,10 +55,10 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
             <div className="flex items-center gap-x-[24px] gap-y-[24px] h-[70px]  justify-between">
               <SettingTogleIcon />
               <div className="flex flex-col gap-y-[4px] w-full justify-between">
-                <span className=" flex text-[#191919] font-semibold text-[16px] leading-[100%]">
+                <span className=" flex text-brand-gray-darker font-semibold text-[16px] leading-[100%]">
                   Set up annual budgets by account category
                 </span>
-                <span className="flex text-[#606060] h-[30px] text-[13px] font-regular leading-[100%]">
+                <span className="flex text-brand-gray-muted h-[30px] text-[13px] font-regular leading-[100%]">
                   Allocate funds across income and expense lines with full
                   visibility.
                 </span>
@@ -69,10 +69,10 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
             <div className="flex items-center gap-x-[24px] gap-y-[24px] h-[70px]  justify-between">
               <TrendUpIcon />
               <div className="flex flex-col gap-y-[4px] w-full justify-between">
-                <span className=" flex text-[#191919] font-semibold text-[16px] leading-[100%]">
+                <span className=" flex text-brand-gray-darker font-semibold text-[16px] leading-[100%]">
                   Track actuals vs budget in real time
                 </span>
-                <span className="flex text-[#606060] h-[30px] text-[13px] font-regular leading-[100%]">
+                <span className="flex text-brand-gray-muted h-[30px] text-[13px] font-regular leading-[100%]">
                   See how your community is performing against plan, month by
                   month.
                 </span>
@@ -84,10 +84,10 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
             <div className="flex items-center gap-x-[24px] gap-y-[24px] h-[70px]  justify-between">
               <BarIcon />
               <div className="flex flex-col gap-y-[4px] w-full justify-between">
-                <span className=" flex text-[#191919] font-semibold text-[16px] leading-[100%]">
+                <span className=" flex text-brand-gray-darker font-semibold text-[16px] leading-[100%]">
                   Adjust figures and forecast with ease
                 </span>
-                <span className="flex text-[#606060] h-[30px] text-[13px] font-regular leading-[100%]">
+                <span className="flex text-brand-gray-muted h-[30px] text-[13px] font-regular leading-[100%]">
                   Edit amounts, apply percentage changes, or roll forward last
                   year's data—all in one place.
                 </span>
@@ -96,7 +96,7 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
 
             {/* CTA Button */}
             <div className="pt-3">
-              <button className="w-full bg-[#1A1A1A] hover:bg-[#2A2A2A] text-white font-semibold py-3.5 px-6 rounded-full transition-colors text-[14px]">
+              <button className="w-full bg-brand-black hover:bg-brand-black-hover text-white font-semibold py-3.5 px-6 rounded-full transition-colors text-[14px]">
                 Create Budget
               </button>
             </div>

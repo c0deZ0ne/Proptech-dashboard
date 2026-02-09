@@ -40,7 +40,7 @@ function Appbar() {
   };
 
   return (
-    <header className="relative h-[82px]  bg-[#105B48] flex items-center text-white border-b border-[#176D58] sticky top-0 z-50 justify-between">
+    <header className="relative h-[82px]  bg-brand-green flex items-center text-white border-b border-brand-green-dark sticky top-0 z-50 justify-between">
       {/* Logo */}
       <Appcontainer className="flex items-center justify-between">
         <div
@@ -66,11 +66,11 @@ function Appbar() {
                   </TooltipTrigger>
                   <TooltipContent
                     side="bottom"
-                    className="bg-[#F9FAFB] text-white border"
-                    arrowClassName="bg-[#F9FAFB] fill-[#F9FAFB]"
+                    className="bg-brand-gray-soft text-white border"
+                    arrowClassName="bg-brand-gray-soft fill-brand-gray-soft"
                   >
                     <div className="text-md p-2">
-                      <p className="font-semibold text-[14px] leading-[14.3px] text-[#292929]">
+                      <p className="font-semibold text-[14px] leading-[14.3px] text-brand-gray-dark">
                         {item.label}
                       </p>
                     </div>

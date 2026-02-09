@@ -18,12 +18,12 @@ const StatCard: React.FC<StatCardProps> = ({
 }) => {
   return (
     <div
-      className={`bg-white w-full h-[152px] flex flex-col overflow-hidden rounded-[16px] border border-border shadow-[0px_1px_2px_rgba(16,24,40,0.05)] ${className}`}
+      className={`bg-brand-white w-full h-[152px] flex flex-col overflow-hidden rounded-[16px] border border-border shadow-[0px_1px_2px_rgba(16,24,40,0.05)] ${className}`}
     >
-      <div className="flex items-center justify-between bg-[#F9FAFB] h-[50px] border-b border-border  p-[16px] w-full">
+      <div className="flex items-center justify-between bg-brand-gray-soft h-[50px] border-b border-border  p-[16px] w-full">
         <div className="flex items-center gap-2">
           {Icon && Icon}
-          <h3 className="text-[16px] font-semibold leading-[14.3px] text-[#292929]">
+          <h3 className="text-[16px] font-semibold leading-[14.3px] text-brand-gray-dark">
             {title}
           </h3>
         </div>
@@ -34,7 +34,7 @@ const StatCard: React.FC<StatCardProps> = ({
           View all <ChevronRight size={14} />
         </a>
       </div>
-      <div className="flex-1  p-[16px]  text-[#525252] bg-white">
+      <div className="flex-1  p-[16px]  text-brand-gray-text bg-brand-white">
         {children}
       </div>
     </div>
