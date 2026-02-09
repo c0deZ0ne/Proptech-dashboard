@@ -129,6 +129,38 @@
   }
 }
 
+/* Custom wavy ripple animation */
+@keyframes wave-ripple {
+  0%, 100% { transform: scale(1.2); }
+  25% { transform: scale(0.95); }
+  50% { transform: scale(1.1); }
+  75% { transform: scale(1.05); border-color: #105B48; }
+}
+
+/* @keyframes ripple-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+} */
+
+.profile-initials-ripple {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.group:hover .profile-initials-ripple {
+  animation: wave-ripple 1.5s ease-in-out infinite;
+}
+
+.group:hover .profile-initials-ripple::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid #105B48;
+  animation: ripple-ring 1.5s ease-out infinite;
+  pointer-events: none;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
