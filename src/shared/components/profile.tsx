@@ -37,7 +37,7 @@ const Profile = ({
           <TooltipTrigger asChild>
             <DropdownMenuTrigger asChild>
               <div
-                className={`flex items-center gap-2 cursor-pointer group ${className}`}
+                className={`flex items-center gap-2 cursor-pointer group ${className} `}
               >
                 <div className="w-[40px] h-[40px] rounded-full bg-white text-primary flex items-center justify-center font-bold text-sm border-2 border-white/20 shadow-sm uppercase group-hover:border-white/40 transition-colors">
                   {initials}
@@ -47,11 +47,16 @@ const Profile = ({
           </TooltipTrigger>
           <TooltipContent
             side="bottom"
-            className="bg-gray-900 text-white border-gray-700"
+            className="bg-[#F9FAFB] text-white border w-[170px]"
+            arrowClassName="bg-[#F9FAFB] fill-[#F9FAFB]"
           >
-            <div className="text-xs">
-              <p className="font-semibold">{userName}</p>
-              <p className="text-gray-300">{userEmail}</p>
+            <div className="text-md p-2 space-y-[5px]">
+              <p className="font-semibold text-[16px] leading-[14.3px] text-[#292929]  ">
+                {userName}
+              </p>
+              <p className="text-[14px] leading-[14.3px] text-[#525252]">
+                {userEmail}
+              </p>
             </div>
           </TooltipContent>
         </Tooltip>

@@ -20,6 +20,12 @@ import { navItems } from "@/data";
 import { CalendarDrawer } from "./calendar-drawer";
 import { BudgetingModal } from "./budgeting-modal";
 import Appcontainer from "./appcontainer";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function Appbar() {
   const [isCalendarOpen, setIsCalendarOpen] = React.useState(false);
@@ -46,17 +52,33 @@ function Appbar() {
 
         {/* Navigation */}
         <div className="flex items-center gap-[24px] justify-between">
-          <nav className="hidden lg:flex items-center gap-[24px]">
-            {navItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleNavClick(item.label)}
-                className="flex items-center transition-colors text-white hover:text-white cursor-pointer"
-              >
-                {item.icon}
-              </button>
-            ))}
-          </nav>
+          <TooltipProvider delayDuration={300}>
+            <nav className="hidden lg:flex items-center gap-[24px]">
+              {navItems.map((item, index) => (
+                <Tooltip key={index}>
+                  <TooltipTrigger asChild className="cursor-pointer">
+                    <button
+                      onClick={() => handleNavClick(item.label)}
+                      className="flex items-center transition-colors text-white hover:text-white cursor-pointer"
+                    >
+                      {item.icon}
+                    </button>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    className="bg-[#F9FAFB] text-white border"
+                    arrowClassName="bg-[#F9FAFB] fill-[#F9FAFB]"
+                  >
+                    <div className="text-md p-2">
+                      <p className="font-semibold text-[14px] leading-[14.3px] text-[#292929]">
+                        {item.label}
+                      </p>
+                    </div>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </nav>
+          </TooltipProvider>
           {/* Profile */}
 
           <Profile />
