@@ -16,6 +16,15 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Users, MessageSquare, MapPin, Lock, LogOut } from "lucide-react";
+import { currentUser, profileMenuItems, ProfileMenuItem } from "@/data";
+
+const iconMap: Record<string, React.ReactNode> = {
+  Users: <Users className="mr-3 h-4 w-4 text-gray-600" />,
+  MessageSquare: <MessageSquare className="mr-3 h-4 w-4 text-gray-600" />,
+  MapPin: <MapPin className="mr-3 h-4 w-4 text-gray-600" />,
+  Lock: <Lock className="mr-3 h-4 w-4 text-gray-600" />,
+  LogOut: <LogOut className="mr-3 h-4 w-4" />,
+};
 
 interface ProfileProps {
   initials?: string;
@@ -25,10 +34,10 @@ interface ProfileProps {
 }
 
 const Profile = ({
-  initials = "D",
+  initials = currentUser.initials,
   className = "",
-  userName = "Dylan Frank",
-  userEmail = "dylan96@mail.com",
+  userName = currentUser.userName,
+  userEmail = currentUser.userEmail,
 }: ProfileProps) => {
   return (
     <TooltipProvider delayDuration={300}>
@@ -60,7 +69,7 @@ const Profile = ({
             </div>
           </TooltipContent>
         </Tooltip>
-        <DropdownMenuContent align="end" className="w-[240px] p-2">
+        <DropdownMenuContent align="end" className="w-[300px] p-2">
           {/* User Info Section */}
           <div className="flex items-center gap-3 px-2 py-3">
             <div className="w-[40px] h-[40px] rounded-full bg-[#105B48] text-white flex items-center justify-center font-bold text-sm uppercase">
@@ -72,41 +81,26 @@ const Profile = ({
             </div>
           </div>
 
-          <DropdownMenuSeparator />
-
           {/* Menu Items */}
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2">
-            <Users className="mr-3 h-4 w-4 text-gray-600" />
-            <span className="text-sm text-gray-700">Teams</span>
-          </DropdownMenuItem>
-
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2">
-            <MessageSquare className="mr-3 h-4 w-4 text-gray-600" />
-            <span className="text-sm text-gray-700">Snagging</span>
-          </DropdownMenuItem>
-
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2">
-            <MessageSquare className="mr-3 h-4 w-4 text-gray-600" />
-            <span className="text-sm text-gray-700">Feedback</span>
-          </DropdownMenuItem>
-
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2">
-            <MapPin className="mr-3 h-4 w-4 text-gray-600" />
-            <span className="text-sm text-gray-700">Geo-Bucket</span>
-          </DropdownMenuItem>
-
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2">
-            <Lock className="mr-3 h-4 w-4 text-gray-600" />
-            <span className="text-sm text-gray-700">Change password</span>
-          </DropdownMenuItem>
-
-          <DropdownMenuSeparator />
-
-          {/* Logout */}
-          <DropdownMenuItem className="cursor-pointer py-2.5 px-2 text-red-600 focus:text-red-600 focus:bg-red-50">
-            <LogOut className="mr-3 h-4 w-4" />
-            <span className="text-sm font-medium">Logout</span>
-          </DropdownMenuItem>
+          {profileMenuItems.map((item: ProfileMenuItem, index: number) => (
+            <React.Fragment key={item.label}>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem
+                className={`cursor-pointer py-2.5 px-2 ${
+                  item.isLogout
+                    ? "text-red-600 focus:text-red-600 focus:bg-red-50"
+                    : ""
+                }`}
+              >
+                {iconMap[item.icon]}
+                <span
+                  className={`text-sm ${item.isLogout ? "font-medium" : "text-gray-700"}`}
+                >
+                  {item.label}
+                </span>
+              </DropdownMenuItem>
+            </React.Fragment>
+          ))}
         </DropdownMenuContent>
       </DropdownMenu>
     </TooltipProvider>
