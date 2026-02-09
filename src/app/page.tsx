@@ -1,4 +1,5 @@
 "use client";
+import * as React from "react";
 
 import {
   Plus,
@@ -166,6 +167,13 @@ const MetricItem = ({
 );
 
 export default function Home() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Appcontainer className="flex items-center justify-between ">
       <div className="flex flex-1 flex-col py-10 justify-between bg-[#F9FAFB]   ">
@@ -211,55 +219,72 @@ export default function Home() {
                 <div className="absolute left-[0px] z-10 w-[18px] h-[18px] bg-[#E4E4E4] rounded-full shadow-sm flex items-center justify-center cursor-pointer hover:bg-gray-50">
                   <ChevronLeft size={10} className="text-[#111111]" />
                 </div>
-                <ResponsiveContainer className="w-full h-full border-none  ">
-                  <BarChart
-                    data={data}
-                    margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
-                    barGap={3}
-                    className="border-none outline-none"
+                {mounted ? (
+                  <ResponsiveContainer
+                    className="w-full h-full border-none"
+                    minWidth={0}
+                    minHeight={0}
+                    debounce={100}
                   >
-                    <XAxis
-                      dataKey="name"
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fill: "#919191", fontSize: 12, fontWeight: 500 }}
-                      dy={10}
-                    />
-                    <YAxis
-                      axisLine={false}
-                      tickLine={false}
-                      tick={{ fill: "#919191", fontSize: 12, fontWeight: 500 }}
-                      tickFormatter={(value) =>
-                        value === 0 ? "0" : `${value / 1000000}m`
-                      }
-                    />
-                    <Tooltip
-                      content={<CustomTooltip />}
-                      cursor={{ fill: "#F9FAFB" }}
-                    />
-                    <Bar
-                      name="Inflow"
-                      dataKey="inflow"
-                      fill="#4545FE"
-                      radius={[2, 2, 0, 0]}
-                      barSize={4}
-                    />
-                    <Bar
-                      name="MRR"
-                      dataKey="mrr"
-                      fill="#12B76A"
-                      radius={[2, 2, 0, 0]}
-                      barSize={4}
-                    />
-                    <Bar
-                      name="GMV"
-                      dataKey="gmv"
-                      fill="#F04438"
-                      radius={[2, 2, 0, 0]}
-                      barSize={4}
-                    />
-                  </BarChart>
-                </ResponsiveContainer>
+                    <BarChart
+                      data={data}
+                      margin={{ top: 0, right: 20, left: 0, bottom: 0 }}
+                      barGap={3}
+                      className="border-none outline-none"
+                    >
+                      <XAxis
+                        dataKey="name"
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{
+                          fill: "#919191",
+                          fontSize: 12,
+                          fontWeight: 500,
+                        }}
+                        dy={10}
+                      />
+                      <YAxis
+                        axisLine={false}
+                        tickLine={false}
+                        tick={{
+                          fill: "#919191",
+                          fontSize: 12,
+                          fontWeight: 500,
+                        }}
+                        tickFormatter={(value) =>
+                          value === 0 ? "0" : `${value / 1000000}m`
+                        }
+                      />
+                      <Tooltip
+                        content={<CustomTooltip />}
+                        cursor={{ fill: "#F9FAFB" }}
+                      />
+                      <Bar
+                        name="Inflow"
+                        dataKey="inflow"
+                        fill="#4545FE"
+                        radius={[2, 2, 0, 0]}
+                        barSize={4}
+                      />
+                      <Bar
+                        name="MRR"
+                        dataKey="mrr"
+                        fill="#12B76A"
+                        radius={[2, 2, 0, 0]}
+                        barSize={4}
+                      />
+                      <Bar
+                        name="GMV"
+                        dataKey="gmv"
+                        fill="#F04438"
+                        radius={[2, 2, 0, 0]}
+                        barSize={4}
+                      />
+                    </BarChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <div className="w-full h-full" />
+                )}
                 {/* </div> */}
                 <div className="w-[20px] relative h-full flex items-center justify-center pl-[9px] relative shadow-[-4px_0_8px_-4px_rgba(0,0,0,0.1)]">
                   <div className="z-10 w-[20px] absolute left-[9px] top-1/2 -translate-y-1/2 h-[18px] bg-[#E4E4E4] rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-200 transition-colors shadow-sm">
@@ -376,17 +401,18 @@ export default function Home() {
           </div>
           <SliderCard
             images={[
-              "./images/house1.jpg",
+              "/images/house1.jpg",
               "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
               "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
             ]}
             label="MOST CLICKED"
             title="Urban Prime Plaza Premiere"
             badgeType="clicked"
+            priority={true}
           />
           <SliderCard
             images={[
-              "./images/house2.jpg",
+              "/images/house2.jpg",
               "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
             ]}
             label="MOST WATCHLISTED"
@@ -395,7 +421,7 @@ export default function Home() {
           />
           <SliderCard
             images={[
-              "./images/house3.jpg",
+              "/images/house3.jpg",
               "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&q=80&w=800",
               "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800",
             ]}

@@ -34,9 +34,10 @@ export function BudgetingModal({ open, onOpenChange }: BudgetingModalProps) {
             {/* Background Image */}
             <div className="absolute inset-0 w-full h-[213px] ">
               <Image
-                src="/images/budgeting-modal.png"
+                src="/images/popbackground.png"
                 alt="Budgeting Background"
                 fill
+                sizes="(max-width: 438px) 100vw, 438px"
                 className="object-cover"
               />
             </div>

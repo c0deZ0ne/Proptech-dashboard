@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface SliderCardProps {
   images: string[];
   label: string;
   title: string;
   badgeType?: "clicked" | "watched" | "featured";
+  priority?: boolean;
 }
 
 const SliderCard: React.FC<SliderCardProps> = ({
@@ -15,6 +17,7 @@ const SliderCard: React.FC<SliderCardProps> = ({
   label,
   title,
   badgeType = "clicked",
+  priority = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -29,7 +32,7 @@ const SliderCard: React.FC<SliderCardProps> = ({
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide]);
 
   const badgeStyles = {
     clicked: "bg-[#4545FE/80] text-white",
@@ -48,7 +51,14 @@ const SliderCard: React.FC<SliderCardProps> = ({
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={img} alt={title} className="w-full h-full object-cover" />
+            <Image
+              src={img}
+              alt={title}
+              fill
+              sizes="(max-width: 418px) 100vw, 418px"
+              priority={priority && index === 0}
+              className="object-cover"
+            />
             {/* High-Fidelity Overlay Gradient (from Figma: 180deg, 5% to 80%) */}
             <div
               className="absolute inset-0"
